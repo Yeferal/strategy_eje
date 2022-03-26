@@ -13,6 +13,7 @@ public class Sum extends Operation {
     
     @Override
     double executeOperation(double number1, double number2){
+        System.out.println((number1 + number2));
         return number1 + number2;
     }
 }

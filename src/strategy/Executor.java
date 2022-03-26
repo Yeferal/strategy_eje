@@ -9,11 +9,11 @@ package strategy;
  *
  * @author Usuario
  */
-public class Subtraction extends Operation {
+public class Executor {
     
-    @Override
-    double executeOperation(double number1, double number2){
-        System.out.println((number1 - number2));
-        return number1 - number2;
+    
+    public void execute(Operation op, double num1,  double num2){
+        op.executeOperation(num1, num2);
     }
+    
 }

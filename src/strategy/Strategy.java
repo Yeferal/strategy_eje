@@ -5,6 +5,8 @@
  */
 package strategy;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Usuario
@@ -16,13 +18,21 @@ public class Strategy {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Sum sum = new Sum();
-        Subtraction subtraction = new Subtraction();
-        Multiplication multiplication = new Multiplication();
         
-        System.out.println(sum.executeOperation(45, 4));
-        System.out.println(subtraction.executeOperation(25, 5));
-        System.out.println(multiplication.executeOperation(6, 2));
+        Operation sum = new Sum();
+        Operation subtraction = new Subtraction();
+        Operation multiplication = new Multiplication();
+        
+        Scanner s = new Scanner(System.in);
+        System.out.println("Primer Numero");
+        double num1 = s.nextDouble();
+        System.out.println("Segundo Numero");
+        double num2 = s.nextDouble();
+        System.out.println("=========================");
+        Executor executor = new Executor();
+        executor.execute(sum, num1, num2);
+        executor.execute(subtraction, num1, num2);
+        executor.execute(multiplication, num1, num2);
     }
     
 }
